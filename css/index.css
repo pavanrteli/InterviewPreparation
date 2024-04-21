@@ -1,11 +1,14 @@
+/* ------------------------------------------Types of selector----------------------------------------- */
 /* # Types of selectors
     1. Element
     2. class
     3. ID
     4. Inline
 
+-------------------------------------------Specificity------------------------------------------------
 # specificity order - inline > id > class > element */
 
+/* -------------------------------------------Differeence b/w rem and em----------------------------------- */
 /* # difference between rem and em
     rem - dependent on global html font size bydefault its font size is 16px 
           2rem = 32px
@@ -15,6 +18,7 @@
     /* absolute unit - px */
     /* relative unit - rem, em, vw, vh */
 
+/* -----------------------------------------------Pseudo code selectors-------------------------------- */
 /* # Pseudo code selectors
 
     /* visited link */
@@ -36,6 +40,7 @@
     2. visited - once we click on the link then its color will turn into green
     3. active - when we click on link at point of time it turn to blue color and then again to normal color */ 
 
+/* ------------------------------------------Css styling positions---------------------------------------- */
 /* # Css styling positions
     position:relative - 
         1. It will set position relative to its normal position
@@ -58,11 +63,13 @@
         stays in the same place even if the page is scrolled. The top, right, bottom, and left properties
         are used to position the element. */
 
+/* ---------------------------------------------Z-index---------------------------------------------- */
 /* # Z-index
     z-index is used to decide the stack order of the element. It works only on positioned properties 
     and flex children.
     ex - z-index:-1 */
 
+/* --------------------------------------------Diff b/w flex & grid-------------------------------------- */
 /* # Difference b/w flex and grid
     flex - 
         1. flexbox is 1-Dimentional
@@ -77,10 +84,12 @@
         4. it is mostly used in large or complex projects
         5. display:grid */
 
+/* ------------------------------------------border-box----------------------------------------------- */
 /* # box-sizing:border-box -       
     The CSS box-sizing property allows us to include the padding and border in an element's total width
     and height. */
 
+/* -------------------------------------------Box-model------------------------------------------------- */
 /* # Box model
     1. Every element in your application appears as box model.
     I will divide mox model into 5 parts
