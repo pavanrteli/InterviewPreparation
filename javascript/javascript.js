@@ -65,3 +65,13 @@
 // console.log(Math.round(1.2345)) // 1
 // console.log(Math.round(1.5345)) // 2
 
+// -----------------------------------------Arrow functions-------------------------------------------
+// arrow functions are similar to normal functions they are anonymous function because they dont't have name.
+// only difference is that we can assign arrow function to variable and with the help of that variable we 
+// can access that function.
+// let arrowfn=(a,b)=>{
+//         console.log(a+b); // 9 
+//         return a+b;
+// }
+// const add=arrowfn(5,4);
+// console.log("addition:",add); // addition: 9
