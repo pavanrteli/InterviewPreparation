@@ -162,9 +162,9 @@
                         // a is not safe. so using var is risky for block scope
                         // if(true){
                         //         var a=5;
-                        //         console.log(a);
+                        //         console.log(a); // 5
                         // }
-                        // console.log(a);
+                        // console.log(a); // 5
 
 
 // -------------------------------diff b/w var, let & const-------------------------------------------
@@ -184,6 +184,40 @@
 //        4. hoisting is not allowed
 
 
+// --------------------------------------------Hoisting-----------------------------------------------
+// hoisting is a javascript mechanism where variable and function declarations are moved to the top of their 
+// scope even before the code execution
+        // eg - 
+        // a=10;
+        // console.log(a); // 10
+        // var a;
 
+
+// ------------------------------------------Closure-----------------------------------------------------
+// closure = function + lexical environment
+// Whenever you are returning any inner function from outer function at that time you are not just returning
+// inner function but you are returning inner function and also its lexical environment.
+// lexical environment - inner function in outer function where outer function is having full access of
+//                       inner function
+        // eg -
+        // let globalVar="global";
+        // function grandParent(){
+        //         function parent(){
+        //                 var a="parent"
+        //                 function son(){
+        //                         var b="son"
+        //                         console.log(b);
+        //                         console.log(a);
+        //                         console.log(globalVar);
+        //                 }
+        //                 return son;
+        //         } 
+        //         return parent;
+        // }
+        // const result=grandParent();
+        // const finalResult=result();
+        // finalResult();  // son
+                        // parent
+                        // global
 
 
