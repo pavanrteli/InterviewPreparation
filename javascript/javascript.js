@@ -128,7 +128,14 @@
 //         const removedElements = numbers.splice(2, 2);
 //         console.log(removedElements); // Output: [3, 4]
 //         console.log(numbers); // Output: [1, 2, 5]
-       
+
+// reduce - reduce method is used to calculation of whole array and then return a single value
+        // eg - 
+        // let arr=[1,2,3,4,5];
+        // let newArr=arr.reduce((acc,currVal)=>{
+        //         return acc+currVal
+        // },0)
+        // console.log(newArr); // 15
 
 
 // ------------------------primitive and non-primitive data types/passByValue&passByReference------------
@@ -247,5 +254,11 @@
                         // global
 
 
+// --------------------------------diff b/w objects and json--------------------------------------------
+// objects - 1. key and value pair need not to be compulsory written in double quotes
+//           2. it can contain function as value 
+//           3. objects are mostly used in javascript only
 
-
+// json -  1. key and value pair need to be compulsory written in double quotes
+//         2. it cannot contain function as value. it contains just plain Text 
+//         3. json are commonly used by web applications for transmitting data between servers
