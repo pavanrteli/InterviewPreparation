@@ -103,6 +103,32 @@
 // --------------------------------------------Higher order functions------------------------------------
 // In javascript higher order functions are those functions which can accept function as a parameter or return
 // function. ex- map(), foreach(), reduce(), filter(), find(), sort() etc 
+// difference b/w foreach and map - the main difference b/w them is foreach cannot return anything but map 
+//                                  return a value.
+// slice - it slices a part from array and it does not modifies original array instead it return a new array
+// syntax - array.slice(startIndex, endIndex);
+        // eg -
+        //  let arr = [
+        //         "educative",
+        //         4,
+        //         [1,3],
+        //         {type: "animal"}
+        //       ];
+        //       let slicedValues = arr.slice(1,3);
+        //       console.log(arr); // [ 'educative', 4, [ 1, 3 ], { type: 'animal' } ]
+        //       console.log(slicedValues); // [ 4, [ 1, 3 ] ]
+
+// splice - it returns the removed elements and also modifies original Array.
+// syntax - array.splice(startIndex, deleteCount, item1, item2, ...);
+// startIndex (required): The index at which to start modifying the array. If negative, it counts from the end of the array.
+// deleteCount (optional): The number of elements to remove from the array. If set to 0, no elements are removed.
+// item1, item2, … (optional): Elements to be added to the array at the startIndex. 
+//       eg -
+//         const numbers = [1, 2, 3, 4, 5];
+//         const removedElements = numbers.splice(2, 2);
+//         console.log(removedElements); // Output: [3, 4]
+//         console.log(numbers); // Output: [1, 2, 5]
+       
 
 
 // ------------------------primitive and non-primitive data types/passByValue&passByReference------------
@@ -219,5 +245,7 @@
         // finalResult();  // son
                         // parent
                         // global
+
+
 
 
