@@ -9,6 +9,7 @@ non-semantic elements -
     2.ex are <div/>, <span/> etc
     3.non semantic elements does not help to improve seo's.
 
+
 --------------------------------------------Block & inline elements-------------------------------------
 # Block and Inline level elements
 block elements - 
@@ -20,10 +21,12 @@ inline elements -
     2.inline level elements cannot contain block elements.
     3.ex <br/>, <span/>, <img/>, <a/> -->
 
+
 <!-- ---------------------------------------------Meta tags----------------------------------------------- -->
 <!-- # Meta tag
     meta tags are giving information of your web application to the browser.(give mobile image ex)
     this also used to improve seo's and achieve accessibility -->
+
 
 <!-- -------------------------------------------------Accessibility-------------------------------------- -->
 <!-- # Accessibility - 
@@ -33,11 +36,13 @@ inline elements -
     on somepart like header or footer then android will try to speak and give them some information about the scrren
     this is accessbility only. also like meta tags, semantic tags etc this all help to improve accessibility. -->
 
+
 <!-- -------------------------------------------------Doctype------------------------------------------------->
 <!-- # Doctype - 
     Doctype basically gives information regarding the document to the browser. like which version of html
     we are using and what type of content needs to get displayed on screen. this ensures that on different
     browsers same web page is getting displayed.  -->
+
 
 <!-- ----------------------------------------------------Link tag------------------------------------------------->
 <!-- # link tag -
@@ -45,6 +50,49 @@ inline elements -
     current doc and linked doc.
     <link rel="stylesheet" href="styles.css" /> -->
 
+
 <!-- ---------------------------------------------------------Script tag------------------------------------->
 <!-- # Script tag - 
     It is used to import javascript files in html file  -->
+
+
+<!--------------------------------------------DOM------------------------------------------------------>
+<!-- DOM is document object model. initially when browser requests for any website it receives js,html,css file
+& this browser will not understand. so here browser has its interpreter which will parse the document initially 
+and convert it into dom tree/objects and this dom representation allows us to manupulate dom such as structure,
+styling, content etc and this we can do with the help of js. now this dom structure browser will understand
+and starts painting for displaying website on screen. -->
+
+
+<!-----------------------------------------------BOM-------------------------------------------------------->
+<!-- BOM stands for Browser Object Model. It is a collection of objects that allow JavaScript to interact with
+the browser, including the browser window, history, and location. 
+Here are some of the most commonly used BOM objects:
+Window:
+The window object represents the browser window. It provides properties and methods for interacting with 
+the window, such as its size, position, and title.
+Document:
+The document object represents the HTML document that is currently loaded in the browser. It provides 
+properties and methods for interacting with the document, such as its title, body, and elements.
+Navigator:
+The navigator object provides information about the user's browser, such as its name, version, and 
+operating system.
+History:
+The history object provides information about the user's browsing history, such as the list of pages that 
+the user has visited.
+Location:
+The location object provides information about the current URL, such as its protocol, hostname, and 
+pathname. 
+even console.log and setTimeOut are browser properties-->
+
+
+<!--------------------------------------Difference b/w DOM and BOM------------------------------------------->
+<!-- dom - 1. its purpose is to show the representation of html or xml document where with the help of js we can 
+         manupulate dom
+      2. dom provides objects like document,element,node,attribute etc to developers to interact with dom
+         elements.
+      3. eg - accessing element in the dom and changing its content.
+bom - 1. its purpose is to provide collection of objects and with the help of these objects js can talk with 
+         browser.
+      2. its provide various objects such as window, screen, document, navigator, history etc.
+      3. eg - using window object in the bom to open new browser window. -->
