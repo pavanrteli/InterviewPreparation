@@ -262,3 +262,56 @@
 // json -  1. key and value pair need to be compulsory written in double quotes
 //         2. it cannot contain function as value. it contains just plain Text 
 //         3. json are commonly used by web applications for transmitting data between servers
+
+
+// ------------------------------------Promise------------------------------------------------------
+// before the introduction of promise asyn operations were taken care with the help of callback functions
+// this used to create nested callback function which was very complex. but with help of promise we maintain 
+// a structure and it is easy to implement.
+//  promise is nothing but a placeholder for future value and this value may be successfull or unsuccessfull.
+//  while implementing promise we need to wait for value therefore we use await keyword and if we are using await
+//  then we need to make function async. in promise we need to pass 2 paramenters resolve and reject. there are 3 states 
+//  in promise, while fetching any data the state is pending and once we receive data succesfully then its state
+//  changes to fullfilled state. and if data received is unsuccessfull then its state is rejected.
+        // eg -
+        // function fetchData(){
+        //         return new Promise((resolve,rejected)=>{
+        //                 setTimeout(()=>{
+        //                         const data="api data";
+        //                         if(true){
+        //                                 resolve("successfully resolved");
+        //                         } else{
+        //                                 rejected("rejected");
+        //                         }
+        //                 },2000)        
+        //         })
+        // } 
+
+        // fetchData()
+        // .then((data)=>console.log(data))  // successfully resolved
+        // .catch((e)=>console.error(e))
+
+
+// ----------------------------------------------Event loops-----------------------------------------------
+// javascript is synchronous and single threaded language. but we can perform async operations in it by using
+// browser api such as promise and setTimeout.
+// there is a event loop which continously goes on running it never stops. whenever code is
+// getting executing executer and global execution context get created in the call stack and this gec will parse the code 
+// and register all async functions such as setatimeOut, promise separately and implement all non async 
+// functions synchronously. after that this gec gets depreciated. now as async functions complete their execution
+// they come in macro task queue. now event loop checks continously on call stack whether it is empty or not
+// if it is empty it checks in task queue are there any tasks pending. if there are pending tasks then it will
+// move it to call stack one by one and this process goes on continuously. 
+
+// Note - for promises there is micro task queue and for setTimeOut there is macro task queue and event loop
+//         will always ask its first questinn to micro task queue/promises(fetching). 
+
+        // eg - 
+        // console.log(1);
+        // setTimeout(()=>{
+        //         console.log(2);
+        // },3000)
+        // setTimeout(()=>{
+        //         console.log(3);        
+        // },2000)
+        // console.log(4); // 1,4,3,2
