@@ -315,3 +315,28 @@
         //         console.log(3);        
         // },2000)
         // console.log(4); // 1,4,3,2
+
+
+// ------------------------------------------Async and await---------------------------------------------
+// before async and await asynchronous operations in js was achieved using callbacks and nested promises.to
+// make it more simplier and in structured pattern async and await got introduced.
+// whenever we are implementing promise or fetching data from server we need to use await keyword because as this
+// is promise we won't get data immediately hence we need to use await and if we are using await then we need
+// to make that function as async function. 
+// also if we are using async and await to implement asynchronous operation then whenever browser detects await
+// keyword it suspends the async funtion from the callstack and once promise gets resolved then again it puts 
+// async funtion into the callstack. so like this asyn and await works.
+
+
+// -----------------------------------Event propogation (Capturing and bubbling phase)-------------------------------------
+// event propogation refers to how events in dom move through the elements. whether from target phase it 
+// originates to parent or grandparent etc.
+// there are 3 phases.
+// 1. capturing phase - here event moves from outermost element to inward direction to its target element.
+// 2. target phase - this is the phase where we added out event listener or target.
+// 3. bubbling phase - it always moves from inward to outermost element. in this case once it achieve's its 
+// target it starts moving to outermost element.
+
+// according to our requirement we can make use of capturing or bubblibg phase.
+// Note - for capturing phase we need to set useCapture parameter to true and for bubbling phase it needs
+//        to set false and bydefault it is false only.
