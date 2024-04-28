@@ -340,3 +340,11 @@
 // according to our requirement we can make use of capturing or bubblibg phase.
 // Note - for capturing phase we need to set useCapture parameter to true and for bubbling phase it needs
 //        to set false and bydefault it is false only.
+
+
+// ---------------------------------diff b/w innerhtml and innertext-----------------------------------------
+// innerText - it will return a plain text excluding its tags 
+//         eg - hello,<strong>world<strong/> then innertext will return only hello,world
+
+// innerhtml - it will return a plain text including its tags 
+//         eg - hello,<strong>world<strong/> then innerhtml will return hello,<strong>world<strong/> 
