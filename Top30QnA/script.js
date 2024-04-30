@@ -181,3 +181,86 @@
 //         box model gives layout to the element.there are various aspects to elements in web application
 //         like innerspace, outerspace, padding whether element is centered or not so these all things we can do with 
 //         the help of box model only.
+
+
+// ----------------------------Difference between State and Props--------------------------------------
+// Intro line
+//         In React, props and state are both plain JavaScript objects. 
+
+// 3 points of comparison
+// States are managed within the component and props are passed to the component
+// States are used to update component while props are used to communicate between components.
+// States are mutable where as props are immutable.
+
+
+// -----------------------------------What is a state in React?-----------------------------------------------
+// Need for it
+//         Re-rendering of component is mostly done by modifying states.
+// What is it
+//         In React, state refers to the data that represents the current condition of a component. It is a 
+//         JavaScript object that holds information about the component's properties, configuration, or any 
+//         other data that might change over time. State allows React components to manage and update their 
+//         data dynamically, leading to interactive and responsive user interfaces. 
+// How to use
+//         In a React component, you can define and manage state using the useState hook or, in class 
+//         components, by setting the state using this.setState(). 
+// Application of it in your project
+//         Form Handling: Managing the state of form inputs, capturing user input, and updating the UI accordingly.
+//         Conditional Rendering: Controlling the visibility or appearance of components based on certain 
+//                                 conditions stored in the component's state.
+//         User Authentication: Managing the authentication state of a user, such as whether they are logged in or not.
+
+
+// -------------------------What is type coercion? Explain how 3 + 2 + “7” = 57.--------------------------
+// How
+//         Type coercion refers to the automatic conversion of values from one data type to another.
+//         In the expression 3 + 2 + "7", type coercion occurs due to the addition operation involving 
+//         different data types (numbers and a string). 
+// Here's how the expression is evaluated:
+//         Addition of Numbers (3 + 2):
+//                 The first operation involves adding the numbers 3 and 2, resulting in the numeric value 5.
+//         Concatenation with a String ("7"):
+//                 The result of the previous operation (5) is then concatenated with the string "7". In 
+//                 JavaScript, when the + operator encounters a string, it converts the other operand(s) to 
+//                 strings and performs concatenation.
+//         Final Result (Concatenated String):
+//                 Therefore, the final result is the concatenation of the numeric result (5) with the 
+//                 string "7," resulting in the string "57."
+// 2 things to keep in mind while doing it 
+//         Addition of number and string will always concatenate. Final result will be in string format.
+
+
+// -------------------------------What are the different ways to call api in react?--------------------
+// Intro line
+//         There are multiple ways to do api calls. Axios, Fetch API and XMLHttpRequest — have their own 
+//         strengths and weaknesses and can be used to make HTTP requests in a React application.
+// 3 points of comparison
+//         Fetch API using .then and .catch - this method is the traditional way of handelling api's. 
+//         The Fetch API returns a promise that resolves to the response from the server.You can chain .then() to 
+//         handle the successful response and .catch() to handle errors. 
+
+//         Fetch API using async and await - async/await provides a cleaner way to handle promises.
+//         Mark your function as async, and use await to pause execution until the promise resolves.
+
+//         Axios - Axios is a third-party library specifically designed for making HTTP requests.
+//                 Features:
+//                 Simplified syntax compared to Fetch.
+//                 Automatic JSON parsing.
+//                 used to perform crud operations.
+
+
+// ----------------------How to set media queries for different devices? (desktop, tablet, mobile)?-----------
+// How
+//         Use CSS media queries to apply styles based on the characteristics of the device or viewport. Media queries 
+//         allow you to specify different styles for different screen sizes or types of devices.
+// /* For Desktops */ @media only screen and (min-width: 1024px) { /* Desktop styles here */ } /
+// * For Tablets */ @media only screen and (min-width: 768px) and (max-width: 1023px) { /* Tablet styles here */ } 
+// /* For Mobiles */ @media only screen and (max-width: 767px) { /* Mobile styles here */ }
+// 2 things to keep in mind while doing it 
+//         Mobile-First Approach:
+//         Start with styling for mobile devices and then progressively enhance for larger screens. This approach 
+//         ensures a more efficient and optimized experience for users on smaller devices, with the flexibility to 
+//         add additional styles for larger screens.
+//         Viewport Meta Tag:
+//         Include a viewport meta tag in the HTML <head> to ensure proper rendering on mobile devices. This tag 
+//         helps control the width and scaling of the viewport.
