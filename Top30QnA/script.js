@@ -264,3 +264,106 @@
 //         Viewport Meta Tag:
 //         Include a viewport meta tag in the HTML <head> to ensure proper rendering on mobile devices. This tag 
 //         helps control the width and scaling of the viewport.
+
+
+// ---------------------------Difference between Controlled v/s Uncontrolled component------------------------
+// Intro line
+//         There are 2 types of component controlled and uncontrolled.
+// 3 points of comparison
+// State Management:
+//         Controlled Components: These components maintain their state through properties (props) and update it through 
+//         callback functions. The parent component manages the state and passes it down to the controlled component. Any 
+//         changes to the state are controlled by the parent, ensuring a single source of truth.
+//         Uncontrolled Components: In contrast, uncontrolled components manage their state internally. They directly 
+//         interact with the DOM, relying on refs or other mechanisms to access and manipulate the state. This approach 
+//         can lead to a more flexible but potentially less predictable state management.
+// Data Flow:
+//         Controlled Components: Data flows in a unidirectional manner, from the parent component to the controlled child 
+//         component. This ensures a clear and predictable flow of data, making it easier to debug and maintain the 
+//         application.
+//         Uncontrolled Components: Data flow can be more dynamic and bidirectional. Since uncontrolled components manage 
+//         their state independently, they might directly interact with the DOM or receive updates from the user, leading 
+//         to a less strict data flow.
+// Predictability and Debugging:
+//         Controlled Components: Due to the centralized control over state, controlled components are generally more 
+//         predictable and easier to debug. The parent component is aware of the state changes and can implement consistent 
+//         logic throughout the application.
+//         Uncontrolled Components: Predicting the state changes in uncontrolled components can be more challenging since 
+//         the state is managed internally. Debugging may require inspecting the DOM directly or implementing additional 
+//         logging to trace changes.
+
+
+// -----------------------------------------What are lifecycle methods?-------------------------------------
+// Need for it
+//         In React, lifecycle methods are used to control a component's behavior and perform actions at different stages 
+//         of its lifecycle.
+// What is it
+//         Lifecycle methods are special methods provided by React that are invoked at various stages during a 
+//         component's lifecycle. React components go through three main phases: mounting, updating, and unmounting. 
+//         Each phase has associated lifecycle methods that developers can use to perform specific tasks.
+// How to use
+// Mount phase(executes one time) 
+//         Constructor – instance created, state
+//         Render() -  Html is created from jsx and it gives to paint.
+//         ComponentDidMount() – to give notification that content of class component is on the browser now.
+
+//         Update phase – It executes the number of times you update the state. Internal state updates or even if sends 
+//                         new props.
+//         Render – recreates Html fresh with state value.
+//         ComponentDidUpdate() – this methos will execute on every update.
+
+//         Unmount phase (executes one time)
+//         ComponentWillUnmount() – here usually it is used to remove cleanup tasks & to remove intervals. This component 
+//                                 is called whenever we close component or component is removed from the page.
+
+
+// --------------------------------Why are Hooks used? What are they?------------------------------------------
+// Need for it
+//         To add stateful logic to functional components
+// What is it
+//         Hooks are latest feature in React to add stateful logic to functional components.
+// Few of the common hooks are
+//         useState: Allows functional components to have state.
+//         useEffect: Allows functional components to perform side effects like API calls after component renders
+// How to use
+//         Import the specific hook from React library
+//         For useState(), we pass an argument to set initial state value and returns 2 values - state and the 
+//         function to update state
+//         For useEffect(), we pass 2 arguments - function to execute and dependency array of values to decide 
+//         when to execute the function
+
+
+// -------------------What is the difference between virtual DOM and real DOM?--------------------------------
+// Intro line
+//         The Virtual DOM and the Real DOM are concepts associated with web development, particularly in the 
+//         context of frameworks like React.
+// 3 points of comparison
+// Representation:
+//         The Real DOM represents the actual structure of the HTML document in memory.It is a tree-like structure 
+//         consisting of objects that represent each HTML element in the document. The Virtual DOM is an abstraction of 
+//         the Real DOM. It is a lightweight copy of the Real DOM, maintained in memory by JavaScript.
+// Rendering
+//         Any change to the DOM triggers a reflow and repaint of the entire page, which can be resource-intensive. 
+//         Changes made to the Virtual DOM are not immediately reflected in the Real DOM. Reconciliation process takes 
+//         place to update real DOM.
+// Manipulation:
+//         Direct manipulation of the Real DOM is relatively slower, especially when dealing with complex and dynamic 
+//         applications. Manipulating the Virtual DOM is faster than manipulating the Real DOM because it is an in-memory 
+//         representation
+
+
+// ---------------------------------Difference between useEffect and useState?------------------------------
+// Intro line
+//         useState and useEffect both are hooks that are most commonly used in any React application 
+// 3 points of comparison
+// Purpose
+//         useState: manage state within a component.
+//         useEffect: perform side effects in a component such as fetching data, updating the DOM, etc.
+// Usage
+// useState: Takes an argument to initialise the state value and returns an array with two values: the current 
+//           state and a function to update the state
+// useEffect: Takes a function as the first argument and executes that function whenever any values, in the 
+//            dependency array passed as 2nd argument, changes
+// Trigger:useState: State updates are triggered manually by calling the update function returned by useState.
+//         useEffect triggers side effects automatically, after every render, but can be optimized using the 
+//         dependency array
