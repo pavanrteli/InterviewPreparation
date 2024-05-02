@@ -367,3 +367,31 @@
 // Trigger:useState: State updates are triggered manually by calling the update function returned by useState.
 //         useEffect triggers side effects automatically, after every render, but can be optimized using the 
 //         dependency array
+
+
+// --------------------What is the difference between functional and class based components?------------------
+// Intro line
+//         Functional components and class components both are used to display UI on the screen. 
+// 3 points of comparison
+//         Syntax - Functional components are written as a JavaScript function. Class components are written as 
+//         a JavaScript class.
+//         State and Lifecycle Methods - Functional components do not have a state or lifecycle methods. Class 
+//         components have a state and can implement lifecycle methods like componentDidMount and 
+//         componentDidUpdate.
+//         Performance – Functional components are faster as they do not have state and lifecycle, react needs to 
+//         do less work to render these components. Class components are slower as they have state and lifecycle, 
+//         react needs to do comparatively more work to render these  components.
+
+
+// -----------------------------How can you pass data from child component to parent component?--------------
+// How
+//         There are multiple methods to achieve this like using call back function, lifting state up etc. here 
+//         we will discuss about using call back.Create a callback method. This method will get the data from the 
+//         Child to Parent.Pass your data as props in Child. The Child will call the Parent callback using props.
+//         The callback method in the Parent will act as prop to the Child component. 
+//         state lifting up - here there is one parent and 2 children and if I want to pass data from child1 to 
+//         child2 then with the hrlp of state lifting concept I can share data with the siblings.
+
+// 2 things to keep in mind while doing it 
+//         Define callBack function in parent itself but calling it, you can do it from child component.
+//         Pass callBack function as a prop to child component.
