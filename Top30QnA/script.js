@@ -1,4 +1,4 @@
-// -----------------------------------------What is prototype in js?------------------------------------------
+// -----------------------------------------1. What is prototype in js?------------------------------------------
 // Need - prototype play a crucial role in implementing prototyple inheritance in js. the need for prototype
 //         arises from the desire to create efficient and reusable code. prototype help in conserving memory.
 // what is it - in js everything is Object. prototype is also Object. whenever we create any Object along with
@@ -20,7 +20,7 @@
         // console.log(obj1.name); // travis
         // console.log(obj1.fullName); // travis head
 
-// -----------------------------------------This keyword--------------------------------------------
+// -----------------------------------------2. This keyword--------------------------------------------
 // need - 
         // to avoid conflicts between current context and the external one.
 // what it is -
@@ -38,7 +38,7 @@
         //     person.greet("john"); // Logs "Hello, I'm Alice."
 
 
-// -------------------------------------------What is Hoisting----------------------------------------------
+// -------------------------------------------3. What is Hoisting----------------------------------------------
 // need - The concept of hoisting in JavaScript was not necessarily introduced to fulfill a specific need but 
 //         rather as a result of how the language is designed and how its execution context works.
 // what is it - Hoisting is a behavior that occurs during the compilation phase of the JavaScript code,
@@ -57,7 +57,7 @@
         // function sayHello() { console.log("Hello, World!"); }
 
 
-// ------------------------What are event loops?------------------------------------------------------
+// ------------------------4. What are event loops?------------------------------------------------------
 // Need for it - before the introduction of event loops asynchronous operations were handled by using callback
 //               functions or nested promises we can say which was complex to understand. but by event loop
 //               one structure got generated for handling asynchronous functions which was preety easy.
@@ -87,7 +87,7 @@
         // console.log(4); // 1,4,3,2
 
 
-// ------------------------------------What are inline & block elements?----------------------------------
+// ------------------------------------5. What are inline & block elements?----------------------------------
 // Intro line - An element in HTML has a structure that consists of the start tag, content, and then the end 
 //              tag. There are two display values - block and inline elements in HTML.
 // 3 points compared & contrasted
@@ -103,7 +103,7 @@
 //         4. span, a, img tags etc
 
 
-// -------------------------------------What is a meta tag in HTML?--------------------------------------
+// -------------------------------------6. What is a meta tag in HTML?--------------------------------------
 // Why is it needed?
 // meta tags are needed to provide additional information about a page to search engines and other clients.
 // What is it?
@@ -134,7 +134,7 @@
         // </html>
 
 
-// --------------------------------Why use React over Vanilla JS?-----------------------------------------
+// --------------------------------7. Why use React over Vanilla JS?-----------------------------------------
 // Intro line
 //         Both React.js and VanillaJS are used to build dynamic websites. But the differences are
 // 3 points compared & contrasted
@@ -148,7 +148,7 @@
 //         Qkart is developed using react.
 
 
-// -----------------------------------------What is Babel? How is it used with React?------------------------
+// -----------------------------------------8. What is Babel? How is it used with React?------------------------
 // Need for it - 
 //         browser don't understand jsx language. In react to convert jsx code to javascript we need babel. because
 //         browser understand js language only.
@@ -164,7 +164,7 @@
 //         executed across different browsers.
 
 
-// ---------------------------------What is the CSS Box Model?--------------------------------------------
+// ---------------------------------9. What is the CSS Box Model?--------------------------------------------
 // Need:
 //         CSS Box Model is needed to provide a standard way of defining the size and position of HTML elements on a 
 //         web page, enabling visually appealing and responsive web designs.
@@ -183,7 +183,7 @@
 //         the help of box model only.
 
 
-// ----------------------------Difference between State and Props--------------------------------------
+// ----------------------------10. Difference between State and Props--------------------------------------
 // Intro line
 //         In React, props and state are both plain JavaScript objects. 
 
@@ -193,7 +193,7 @@
 // States are mutable where as props are immutable.
 
 
-// -----------------------------------What is a state in React?-----------------------------------------------
+// -----------------------------------11. What is a state in React?-----------------------------------------------
 // Need for it
 //         Re-rendering of component is mostly done by modifying states.
 // What is it
@@ -211,7 +211,7 @@
 //         User Authentication: Managing the authentication state of a user, such as whether they are logged in or not.
 
 
-// -------------------------What is type coercion? Explain how 3 + 2 + “7” = 57.--------------------------
+// -------------------------12. What is type coercion? Explain how 3 + 2 + “7” = 57.--------------------------
 // How
 //         Type coercion refers to the automatic conversion of values from one data type to another.
 //         In the expression 3 + 2 + "7", type coercion occurs due to the addition operation involving 
@@ -230,7 +230,7 @@
 //         Addition of number and string will always concatenate. Final result will be in string format.
 
 
-// -------------------------------What are the different ways to call api in react?--------------------
+// -------------------------------13. What are the different ways to call api in react?--------------------
 // Intro line
 //         There are multiple ways to do api calls. Axios, Fetch API and XMLHttpRequest — have their own 
 //         strengths and weaknesses and can be used to make HTTP requests in a React application.
@@ -249,7 +249,7 @@
 //                 used to perform crud operations.
 
 
-// ----------------------How to set media queries for different devices? (desktop, tablet, mobile)?-----------
+// ----------------------14. How to set media queries for different devices? (desktop, tablet, mobile)?-----------
 // How
 //         Use CSS media queries to apply styles based on the characteristics of the device or viewport. Media queries 
 //         allow you to specify different styles for different screen sizes or types of devices.
@@ -266,7 +266,7 @@
 //         helps control the width and scaling of the viewport.
 
 
-// ---------------------------Difference between Controlled v/s Uncontrolled component------------------------
+// ---------------------------15. Difference between Controlled v/s Uncontrolled component------------------------
 // Intro line
 //         There are 2 types of component controlled and uncontrolled.
 // 3 points of comparison
@@ -293,7 +293,7 @@
 //         logging to trace changes.
 
 
-// -----------------------------------------What are lifecycle methods?-------------------------------------
+// -----------------------------------------16. What are lifecycle methods?-------------------------------------
 // Need for it
 //         In React, lifecycle methods are used to control a component's behavior and perform actions at different stages 
 //         of its lifecycle.
@@ -317,7 +317,7 @@
 //                                 is called whenever we close component or component is removed from the page.
 
 
-// --------------------------------Why are Hooks used? What are they?------------------------------------------
+// --------------------------------17. Why are Hooks used? What are they?------------------------------------------
 // Need for it
 //         To add stateful logic to functional components
 // What is it
@@ -333,7 +333,7 @@
 //         when to execute the function
 
 
-// -------------------What is the difference between virtual DOM and real DOM?--------------------------------
+// -------------------18. What is the difference between virtual DOM and real DOM?--------------------------------
 // Intro line
 //         The Virtual DOM and the Real DOM are concepts associated with web development, particularly in the 
 //         context of frameworks like React.
@@ -352,7 +352,7 @@
 //         representation
 
 
-// ---------------------------------Difference between useEffect and useState?------------------------------
+// ---------------------------------19. Difference between useEffect and useState?------------------------------
 // Intro line
 //         useState and useEffect both are hooks that are most commonly used in any React application 
 // 3 points of comparison
@@ -369,7 +369,7 @@
 //         dependency array
 
 
-// --------------------What is the difference between functional and class based components?------------------
+// --------------------20. What is the difference between functional and class based components?------------------
 // Intro line
 //         Functional components and class components both are used to display UI on the screen. 
 // 3 points of comparison
@@ -383,7 +383,7 @@
 //         react needs to do comparatively more work to render these  components.
 
 
-// -----------------------------How can you pass data from child component to parent component?--------------
+// -----------------------------21. How can you pass data from child component to parent component?--------------
 // How
 //         There are multiple methods to achieve this like using call back function, lifting state up etc. here 
 //         we will discuss about using call back.Create a callback method. This method will get the data from the 
@@ -395,3 +395,132 @@
 // 2 things to keep in mind while doing it 
 //         Define callBack function in parent itself but calling it, you can do it from child component.
 //         Pass callBack function as a prop to child component.
+
+
+// --------------------------------22. Difference between useCallback & useMemo---------------------------------
+// Intro line
+//         Two frequently used hooks, useMemo and useCallback, might seem similar at first glance, but they 
+//         serve distinct purposes in optimizing React applications.
+// 3 points of comparison
+//         Purpose:
+//         useMemo is used to memoize values or computations, helping to optimize expensive calculations or data 
+//         transformations.
+//         useCallback is used to memoize callback functions, reducing unnecessary re-creation of 
+//         functions and optimizing component re-renders.
+//         Return Value:
+//         useMemo returns the memoized value itself.
+//         useCallback returns the memoized callback function itself.
+//         Usage Scenario:
+//         Use useMemo when you want to optimize and cache the result of a computation that depends on certain inputs.
+//         Use useCallback when you want to optimize the creation of callback functions that are passed to child components.
+
+
+// ------------------------------------------23. What is useRef---------------------------------------------
+// Need for it
+//         Initially we used to use useState for everything even for simple calculation this used to create 
+//         unnecessary re-renders which was not required, So to tackle this useRef was introduced.
+// What is it
+//         useRef is a react hook which persists data across the renders without causing unnecessary re-render.
+//         Direct interaction with DOM can be done with useRef like focusing on input field also like measuring 
+//         size of elements.
+// How to use
+//         We need to import useRef from react and simply we can use useRef keyword and use it.
+//         Eg- const ref=useRef();
+
+
+// -----------------------------------24. What are hooks--------------------------------------------------------
+// Need for it 
+//         initially state were created only in class components not in functional components but after the introduction
+//         of hooks in react 16.8 we are able to create states in functional components also.
+// what is it 
+//         Hooks are a features introduced in react 16.8 that allows us to create states in functional components. 
+//         These hooks are mostly used to optimize the rerendering, manage state and side effectsby due to which 
+//         our software's performance will also boost efficiently and hooks like useState, useEffect, useContext, 
+//         useCallBack etc are used to perform different aspects of the component logic and behaviour.
+// how to use
+//         we need to import hooks by using import keyword and and start using it.
+
+
+// ------------------------------25. Diff b/w useState and useEffect-------------------------------------------
+// Intro line
+//         both are react hooks used to write simpler and cleaner code for functional components.
+// 3 points of comparison
+//         useState - 1. it is used to create state variables in functional components.
+//                    2. it return array containing of current state value and function to update that state.
+//                    3. it runs before the render function.
+//         useEffect - 1. it is used to deal with side effects such as unnecessary re-rendering and api calls.
+//                     2. it return callback function and dependency. with the help of dependency we control its triggering.
+//                     3. it runs after the render function.
+
+
+// ----------------------------------26. why not use var instead of useState?----------------------------------------
+// Intro line 
+//         both are used to create varibles.
+// 3 points of comparison
+//         var - 1. varibles created using var does not re-render on modifying it.
+//               2. var are functional scoped.
+//               3. var is not a hook.
+//         useState - 1. state varibles support re-rendering on modifying it.
+//                    2. useState are component scoped therefore they are predictable and chances of error is less.
+//                    3. useState is a hook in React. 
+
+
+// ----------------------27. How to implement diff lifecycle methods using useEffect?-----------------------------
+// How
+//         there are 3 phases in lifecycle methods mounting phase, updating phase, unmounting phase. 
+//         for mounting phase - componentDidMount() method will execute and in functional component we can perform 
+//                              this kind of operation using useEffect. here we need to pass an empty dependency. then
+//                              it will work similar to componentDidMount() method.
+//         updating phase - componentDidUpdate() method is there. to work similar to this we need to pass a dependency 
+//                          in useEffect so whenever that dependency is getting changed then only useEffect will trigger
+//                          its callback function.
+//         unmounting phase - componentWillUnmount() method is there. to work similar to this we need to pass a return
+//                            with callback function inside useEffect.and in that callback function we can write any cleanup 
+//                            tasks or resetting interval etc.
+// 2 things to keep in mind while doing it 
+// 1. if we don't pass dependency then on every render this useEffect will run.
+// 2. return is optional in useEffect if you are performing any clean up tasks or anything similar to it then only 
+//    make use of return to behave it like componentDidUnmount() method.
+
+
+// ------------------------------------------28. Diff b/w Semantic & non-semantic-------------------------------------------
+// Intro line 
+//      there are 2 types of elements Semantic and non-Semantic.
+// 3 points of comparison 
+// semantic elements -
+//     1.semantic elements are those which define a particular meaning of element to browser or user.
+//     2.ex are <header/>, <footer/>, <section/> etc
+//     3.semantic elements help to improve seo's.
+// non-semantic elements -
+//     1.non-semantic elements are those which does not define any meaning of element to browser or user.
+//     2.ex are <div/>, <span/> etc
+//     3.non semantic elements does not help to improve seo's.
+
+
+// --------------------------------------------29. Diff b/w Block & inline elements-------------------------------------
+// Intro line
+//      for developing any web application Block and Inline level elements are always used.
+// block elements - 
+//     1.block level element take the entire horizontal width and always start in new line.
+//     2.block level elements can contain inline elements.
+//     3.ex <div/>, <h1/>, <p/>
+// inline elements - 
+//     1.inline level element always take required width and they do not start on new line.
+//     2.inline level elements cannot contain block elements.
+//     3.ex <br/>, <span/>, <img/>, <a/> -->
+
+
+/* -------------------------------------------30. What is the CSS Box-model?------------------------------------------------- */
+// Need for it
+//         Every element in your application appears as box model. box model gives layout to to the element.
+//         there are various aspects to elements in web application like innerspace, outerspace, padding 
+//         whether element is centered or not so these all things we can do with the help of box model only.
+// What is it
+//         I will divide mox model into 5 parts
+//         content-every elements has to hold something which is content.
+//         padding-padding is space around the content 
+//         border-outer line of element which will highlight that element.
+//         margin-creating space around elements is margin
+// How to use
+//         by doing inspect on browser in styles section we can see a box model of the element. by this we can visualize
+//         that how much margin, padding, border etc is given to that element.
