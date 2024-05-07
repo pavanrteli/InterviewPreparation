@@ -433,6 +433,8 @@
 //         initially state were created only in class components not in functional components but after the introduction
 //         of hooks in react 16.8 we are able to create states in functional components also.
 // what is it 
+//         Hooks are functions which are used to communicate to react api's 
+//         react api - communicating with states, dom, ref etc
 //         Hooks are a features introduced in react 16.8 that allows us to create states in functional components. 
 //         These hooks are mostly used to optimize the rerendering, manage state and side effectsby due to which 
 //         our software's performance will also boost efficiently and hooks like useState, useEffect, useContext, 
@@ -524,3 +526,10 @@
 // How to use
 //         by doing inspect on browser in styles section we can see a box model of the element. by this we can visualize
 //         that how much margin, padding, border etc is given to that element.
+
+
+// ------------------Extra qns---------------------------------------------------------------------
+// useContext - useContext is basically a system which helps you to pass props from one level to other level without
+//              using prop drilling. it return 2 values provider and consumer. provider tells react that we want
+//              to start the context from this particular field and with the help of consumer we can make use of
+//              value in child components. 
