@@ -211,7 +211,7 @@
 //       3. re-assignment is possible
 //       4. hoisting is not allowed
 
-// cont - 1. var is block scoped
+// cont - 1. const is block scoped
 //        2. re-declaration not allowed
 //        3. re-assignment not allowed
 //        4. hoisting is not allowed
@@ -297,7 +297,7 @@
 // browser api such as promise and setTimeout.
 // there is a event loop which continously goes on running it never stops. whenever code is
 // getting executing executer and global execution context get created in the call stack and this gec will parse the code 
-// and register all async functions such as setatimeOut, promise separately and implement all non async 
+// and register all async functions such as settimeOut, promise separately and implement all non async 
 // functions synchronously. after that this gec gets depreciated. now as async functions complete their execution
 // they come in macro task queue. now event loop checks continously on call stack whether it is empty or not
 // if it is empty it checks in task queue are there any tasks pending. if there are pending tasks then it will

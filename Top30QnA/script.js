@@ -5,8 +5,8 @@
 //              that object prototype is also associated with it. in this prototype there are several 
 //              properties included. and this prototype is connected to other prototype and this is called 
 //              prototype chain. when we try to search any property in object then it will try to search in 
-//              object. after that it will search in its protoype and then it will search for in protyple 
-//              chain. and finally it reaches end where protype object is null and it return undefined. so 
+//              object. after that it will search in its prototype and then it will search for in protyple 
+//              chain. and finally it reaches end where prototype object is null and it return undefined. so 
 //              prototype plays very important role in creating reusable code and conserving memory.
 // how to use - eg - 
         // function Person(name,surname, age, role){
@@ -67,7 +67,7 @@
 // browser api such as promise and setTimeout.
 // there is a event loop which continously goes on running it never stops. whenever code is
 // getting executing executer and global execution context get created in the call stack and this gec will parse the code 
-// and register all async functions such as setatimeOut, promise separately and implement all non async 
+// and register all async functions such as settimeOut, promise separately and implement all non async 
 // functions synchronously. after that this gec gets depreciated. now as async functions complete their execution
 // they come in macro task queue. now event loop checks continously on call stack whether it is empty or not
 // if it is empty it checks in task queue are there any tasks pending. if there are pending tasks then it will
@@ -293,6 +293,14 @@
 //         logging to trace changes.
 
 
+// SN	Controlled	                                        Uncontrolled
+// 1.	It does not maintain its internal state.	        It maintains its internal states.
+// 2.	Here, data is controlled by the parent component.	Here, data is controlled by the DOM itself.
+// 3.	It accepts its current value as a prop.	                It uses a ref for their current values.
+// 4.	It allows validation control.	                        It does not allow validation control.
+// 5.	It has better control over the form elements and data.	It has limited control over the form elements and data.
+
+
 // -----------------------------------------16. What are lifecycle methods?-------------------------------------
 // Need for it
 //         In React, lifecycle methods are used to control a component's behavior and perform actions at different stages 
@@ -390,11 +398,11 @@
 //         Child to Parent.Pass your data as props in Child. The Child will call the Parent callback using props.
 //         The callback method in the Parent will act as prop to the Child component. 
 //         state lifting up - here there is one parent and 2 children and if I want to pass data from child1 to 
-//         child2 then with the hrlp of state lifting concept I can share data with the siblings.
+//         child2 then with the help of state lifting concept I can share data with the siblings.
 
 // 2 things to keep in mind while doing it 
 //         Define callBack function in parent itself but calling it, you can do it from child component.
-//         Pass callBack function as a prop to child component.
+vt//         Pass callBack function as a prop to child component.
 
 
 // --------------------------------22. Difference between useCallback & useMemo---------------------------------
@@ -436,11 +444,11 @@
 //         Hooks are functions which are used to communicate to react api's 
 //         react api - communicating with states, dom, ref etc
 //         Hooks are a features introduced in react 16.8 that allows us to create states in functional components. 
-//         These hooks are mostly used to optimize the rerendering, manage state and side effectsby due to which 
+//         These hooks are mostly used to optimize the rerendering, manage state and side effects due to which 
 //         our software's performance will also boost efficiently and hooks like useState, useEffect, useContext, 
 //         useCallBack etc are used to perform different aspects of the component logic and behaviour.
 // how to use
-//         we need to import hooks by using import keyword and and start using it.
+//         we need to import hooks by using import keyword and start using it.
 
 
 // ------------------------------25. Diff b/w useState and useEffect-------------------------------------------
