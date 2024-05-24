@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 /node_modules/
+
+git remote set-url origin https://<username>:<personal_access_token>@<repository_url>
