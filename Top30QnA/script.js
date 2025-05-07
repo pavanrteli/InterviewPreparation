@@ -582,3 +582,101 @@ provide metadata about the request or response. // Hypermedia as the Engine of A
 Q Search
 
 Ln 496, Col 45 Spaces:
+
+
+What is prototype in js?
+
+there
+
+for every developer for choosing react or angular. but anyhow react is more popülar compared react. there are several reasons behind it.
+
+//
+
+performance: react uses virtual dom concept due to which only required UI gets re-rendered. due to which
+
+is faster. //
+
+reusable component: there is concept called reusable component due to which we write less code.
+
+active community:react has very larger and active community. if stuck at any place then there are ready made docs available and continues support.
+
+316 517 ---31. why react compare to other framework like angular- well there might be differernt reasons
+
+518
+
+519
+
+520
+
+521
+
+522
+
+523
+
+524
+
+525
+
+526
+
+// ---- --32. http status codes-
+
+527
+
+// Successful Responses (2xx)
+
+528
+
+// 200 OK: The request was successful.
+
+529
+
+530
+
+// 201 Created: The request was successful and a new resource was created. // 204 No Content: The server successfully processed the request, but there's no content to return.
+
+531
+
+532
+
+// Redirection Messages (3xx) //
+
+533
+
+301 Moved Permanently: The resource has been moved to a new URL permanently. // 302 Found: The resource is temporarily located at a different URL.
+
+534
+
+// 304 Not Modified: The resource has not been modified since the last request.
+
+535
+
+// Client Error Responses (4xx)
+
+536
+
+// 400 Bad Request: The server could not understand the request due to invalid syntax.
+
+537
+
+538
+
+539
+
+rights to the content. // 404 Not Found: The server cannot find the requested resource.
+
+// 401 Unauthorized: Authentication is required and has failed or has not yet been provided. // 403 Forbidden: The client does not have access
+
+540 // Server Error Responses (5xx)
+
+541
+
+542
+
+543
+
+received an invalid response from the upstream server. // 503 Service Unavailable: The server is not ready to handle the request, often due to maintenance or overload.
+
+// 500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.
+
