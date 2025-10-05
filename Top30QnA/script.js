@@ -267,31 +267,11 @@
 
 
 // ---------------------------15. Difference between Controlled v/s Uncontrolled component------------------------
-// Intro line
-//         There are 2 types of component controlled and uncontrolled.
-// 3 points of comparison
-// State Management:
-//         Controlled Components: These components maintain their state through properties (props) and update it through 
-//         callback functions. The parent component manages the state and passes it down to the controlled component. Any 
-//         changes to the state are controlled by the parent, ensuring a single source of truth.
-//         Uncontrolled Components: In contrast, uncontrolled components manage their state internally. They directly 
-//         interact with the DOM, relying on refs or other mechanisms to access and manipulate the state. This approach 
-//         can lead to a more flexible but potentially less predictable state management.
-// Data Flow:
-//         Controlled Components: Data flows in a unidirectional manner, from the parent component to the controlled child 
-//         component. This ensures a clear and predictable flow of data, making it easier to debug and maintain the 
-//         application.
-//         Uncontrolled Components: Data flow can be more dynamic and bidirectional. Since uncontrolled components manage 
-//         their state independently, they might directly interact with the DOM or receive updates from the user, leading 
-//         to a less strict data flow.
-// Predictability and Debugging:
-//         Controlled Components: Due to the centralized control over state, controlled components are generally more 
-//         predictable and easier to debug. The parent component is aware of the state changes and can implement consistent 
-//         logic throughout the application.
-//         Uncontrolled Components: Predicting the state changes in uncontrolled components can be more challenging since 
-//         the state is managed internally. Debugging may require inspecting the DOM directly or implementing additional 
-//         logging to trace changes.
-
+// What are controlled and uncontrolled components ?
+// "In React, a controlled component is one where the form data is handled by React state. An uncontrolled component,
+//  on the other hand, relies on the DOM to manage its own state using refs. I typically use controlled components 
+// when I need to validate, manipulate, or track user input in real time. Uncontrolled components are useful for 
+// quick forms or when integrating with non-React libraries."
 
 // SN	Controlled	                                        Uncontrolled
 // 1.	It does not maintain its internal state.	        It maintains its internal states.
@@ -560,3 +540,191 @@ vt//         Pass callBack function as a prop to child component.
 // performance: react uses virtual dom concept due to which only required UI gets re-rendered. due to whichis faster.
 // reusable component: there is concept called reusable component due to which we write less code.
 // active community:react has very larger and active community. if stuck at any place then there are ready made docs available and continues support.
+
+
+//---------------------- What is transform and translate ?---------------------
+// Certainly. In CSS, the transform property is a powerful tool used to visually manipulate elements without affecting the document flow. It supports multiple transformation functions such as translate, rotate, scale, and skew.
+// ex - transform: translate(50px, 100px); moves right and down
+// transform: translate(-50px, -50px); moves up and left
+
+
+//------------------------ What is event delegation ?----------------------
+// Event delegation is a design pattern in JavaScript that allows us to handle events efficiently, especially when dealing with dynamic or large sets of elements.
+// Instead of attaching individual event listeners to each child element, we attach a single listener to a common parent. This listener takes advantage of event bubbling — where events propagate up the DOM tree — to catch events from its child elements.
+// For example, if I have a <ul> with many <li> items, rather than adding a click listener to each <li>, I can add one listener to the <ul> and check event.target to determine which <li> was clicked.
+// This approach has several benefits:
+// - Performance: Fewer listeners mean less memory usage and faster execution.
+// - Dynamic elements: It works even if child elements are added or removed later.
+// - Cleaner code: Centralized logic is easier to maintain.
+// I often use event delegation when building components like dropdowns, lists, or tables where rows or items are dynamically generated. It’s a great way to write scalable and maintainable front-end code.
+
+
+//----------------- What is shallow copy and deep copy ? explain with example.------------------ 
+// "In JavaScript, a shallow copy duplicates only the top-level properties of an object. If the object contains nested objects or arrays, the references to those nested structures are preserved. A deep copy, on the other hand, recursively copies all levels of the object, ensuring complete separation from the original.
+// shallow copy
+// const original = {
+//   name: "Pavan",
+//   address: { city: "Bengaluru" }
+// };
+
+// const shallowCopy = { ...original };
+// shallowCopy.name = "Raj";
+// shallowCopy.address.city = "Mumbai";
+// console.log(original.address.city); // "Mumbai" — affected!
+
+// deep copy
+// const original = {
+//   name: "Pavan",
+//   address: { city: "Bengaluru" }
+// };
+// const deepCopy = JSON.parse(JSON.stringify(original));
+// deepCopy.address.city = "Mumbai";
+// console.log(original.address.city); // "Bengaluru" — safe!
+
+
+
+// Diff between useeffect and uselayouteffect 
+// "Both useEffect and useLayoutEffect are React hooks used for side effects, but they differ in timing. useEffect runs after the DOM updates and the browser has painted the screen. It's great for tasks like data fetching, subscriptions, or logging. useLayoutEffect, on the other hand, runs synchronously after the DOM updates but before the browser paints. This makes it ideal for layout reads and writes—like measuring DOM elements or applying styles—where timing is critical to avoid flickering or layout shifts.
+
+
+// What are controlled and uncontrolled components ?
+// "In React, a controlled component is one where the form data is handled by React state. An uncontrolled component, on the other hand, relies on the DOM to manage its own state using refs. I typically use controlled components when I need to validate, manipulate, or track user input in real time. Uncontrolled components are useful for quick forms or when integrating with non-React libraries."
+
+
+// When should you use context api over redux ?
+// You should use the Context API over Redux when your application's state management needs are relatively simple and localized. Context is ideal for scenarios like theme toggling, user authentication status, or language preferences — where the state doesn't change frequently and is needed across multiple components. Since Context is built into React, it requires no external setup and is great for avoiding prop drilling. However, it’s not optimized for frequent updates or complex state logic, as every change re-renders all consuming components, which can hurt performance. Redux, on the other hand, is better suited for large-scale applications with deeply nested components, multiple interdependent states, and asynchronous flows. It offers powerful features like middleware, time-travel debugging, and centralized state management. So, if your app grows in complexity or you need fine-grained control over state transitions, Redux becomes the more scalable and maintainable choice. In short, start with Context for lightweight needs, and switch to Redux when your state logic demands more structure and tooling.
+
+
+// explain client server architecture in react application ?
+// Client-server architecture in a React application refers to the separation of concerns between the frontend (client) and the backend (server). In this architecture, the React application functions as the client, which runs in the browser and is responsible for rendering the user interface, handling user interactions, and making asynchronous requests to the server, typically via HTTP APIs."
+// "The server, on the other hand, is responsible for business logic, database operations, authentication, and serving the necessary data to the client. It could be built using technologies such as Node.js with Express, Django, or any other backend framework. The communication between client and server usually happens via REST APIs or GraphQL."
+// "When a user interacts with the React UI—for example, submitting a form or navigating through the app—the client makes a request to the server. The server processes this request, interacts with the database if needed, and returns a response, usually in JSON format. The React application then updates the UI accordingly based on that data."
+// "This separation allows for scalability, maintainability, and a clear division of responsibilities between frontend and backend teams. It also supports modern development practices like microservices and serverless architecture, especially when using React with cloud services or APIs.
+
+
+// What is code splitting, and how would you do it in React?
+// Code splitting is a technique used to break your JavaScript bundle into smaller chunks, so that the browser only loads the code it needs at that moment — instead of loading everything upfront.
+// In React, we achieve code splitting using React.lazy() and dynamic import(), often together with <Suspense>
+// import React, { Suspense } from 'react';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// Lazy loaded components
+// const Home = React.lazy(() => import('./Home'));
+// const About = React.lazy(() => import('./About'));
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Suspense fallback={<div>Loading...</div>}>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//         </Routes>
+//       </Suspense>
+//     </BrowserRouter>
+//   );
+// }
+
+
+// How do you optimize performance in a large React application?
+// We can optimize performance in a large React app by using techniques like code splitting, memoization (React.memo, useMemo, useCallback), lazy loading, virtualization for large lists, avoiding unnecessary re-renders, and optimizing assets and bundle size.
+
+// Explain react fibre and reconciliation 
+// React Fiber is the internal engine that helps React break rendering work into small units and prioritize important updates. like typing > background updates.
+// Reconciliation is the process of comparing the old and new virtual DOM trees to determine what changes in the real DOM.
+// Together, they make UI updates faster, interruptible, and more efficient.
+
+
+// Difference between local state and global state
+// Local state is data managed within a single component using useState, while global state is shared data across multiple components, usually managed with Context API or a state management library like Redux.
+
+
+
+// What are service workers and how do they relate to react apps (PWA) ?
+// A Service Worker is a background script that enables features like offline access, caching, and background sync by intercepting network requests.
+// In React, especially when building a PWA (Progressive Web App), the service worker allows the app to work offline and load faster by caching assets and API responses.
+// Tools like Create React App automatically provide service worker setup for turning your React app into a PWA.
+
+
+
+// Implement your own version of Array.prototype.map()
+// const numbers = [1, 2, 3];
+// const doubled = numbers.myMap(num => num * 2);
+// console.log(doubled); // [2, 4, 6]
+
+// Array.prototype.myMap = function(callback) {
+//   // 'this' is the array that calls myMap
+//   const result = [];
+
+//   for (let i = 0; i < this.length; i++) {
+//     // make sure index exists (for sparse arrays)
+//     if (i in this) {
+//       const newValue = callback(this[i], i, this);
+//       result.push(newValue);
+//     }
+//   }
+
+//   return result;
+// };
+
+
+
+// call a rest api using fetch or axios handle loading, errors and display data.
+// import React,{useEffect, useState} from 'react' 
+// import axios from 'axios'
+
+// export default function FetchApi() {
+
+//     const  [data, setData] = useState([])
+//     const [loading, setLoading] = useState(true)
+//     const [error, setError] = useState(null)
+
+    // using fetch
+    // useEffect(()=>{
+    //     fetch("https://jsonplaceholder.typicode.com/users")
+    //     .then((res)=>{
+    //         if(!res.ok){
+    //             throw new Error("Network response was not ok")
+    //         }
+    //         return res.json()
+    //     })
+    //     .then((data)=>{
+    //         setData(data)
+    //         setLoading(false)})
+    //     .catch((err)=>{
+    //         console.error(err)
+    //         setError(err)
+    //         setLoading(false)    
+    //     })
+    // },[])
+
+    // using axios
+//     useEffect(()=>{
+//         const fetchData=async()=>{
+//             try{    
+//             const response=await axios.get("https://jsonplaceholder.typicode.com/user")
+//             setData(response.data)
+//             setLoading(false)
+//             }catch(err){
+//                 console.error("error messa",err.message)
+//                 setError(err)
+//                 setLoading(false)
+//             }
+//         }
+
+//         fetchData()
+//     },[])
+
+//     console.log(data)
+//   return (
+//     <div>
+//       <h2>User Data</h2>
+//       {loading && <h3>...Loading</h3>}
+//       {error && <h3>Error occured: {error.message}</h3>}
+//       {
+//         data.map((user,idx)=>(
+//             <p key={idx}>{user.company.name} | {user.email}</p>
+//         ))
+//       }
+
+//     </div>
+//   )
+// }
