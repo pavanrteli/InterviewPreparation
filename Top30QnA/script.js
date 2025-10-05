@@ -542,141 +542,21 @@ vt//         Pass callBack function as a prop to child component.
 //              to start the context from this particular field and with the help of consumer we can make use of
 //              value in child components. 
 
-what is Rest Api?
-REST API (Representational State Transfer Application Programming Interface) is a way for different
-software systems to communicate over the internet using standard http web protocols.
-like GET, POST, PUT, and DELETE to perform operations. Think of it like a waiter in a restaurant who takes
+// what is Rest Api?
+// REST API (Representational State Transfer Application Programming Interface) is a way for different
+// software systems to communicate over the internet using standard http web protocols.
+// like GET, POST, PUT, and DELETE to perform operations. Think of it like a waiter in a restaurant who takes
 // REST API Architecture
 // Client-Server Architecture:
 // Client: The client is the application or system that makes requests to the server. For example, a mobile app or a web browser. // Server: The server processes the requests and sends back the appropriate responses. For
-// Stateless:
-// Each request from the client
-to the server must contain all the information needed to understand and process the request. The server does not store any client context between requests. This makes each request independent.
-
-// Cacheable: cacheable, the client can store it and reuse it for
-
-// Responses from the server can be marked as cacheable or non-cacheable. If a response subsequent requests, reducing the load on the server and improving performance. // Uniform Interface:
-
-// REST APIs use a uniform interface, which simplifies and decouples the architecture. This uniform interface is defined by four constraints: Resource Identification: Resources are identified in requests using URIs (Uniform Resource Identifiers). For example, https://api.weather.
-
-com/v3/weather/conditions.
-
-509 // Resource Manipulation Through Representations: Clients interact with resources by using representations (e.g., JSON, XML) and standard HTTP methods (GET, POST, PUT, DELETE).
-
-// Self-descriptive Messages: Each message includes enough information to describe how to process the message. For example, HTTP headers
-
-provide metadata about the request or response. // Hypermedia as the Engine of Application State (HATEOAS): Clients interact with the application entirely through hypermedia provided dynamically by application servers. For example, links in the response guide the client on what actions are available next.
-
-510
-
-511
-
-512 513
-
-// Layered System:
-
-// The architecture can be composed of multiple layers, with each layer having a specific function. For example, a load balancer layer, a security layer, and data storage layer. This layering helps improve scalability and manageability.
-
-:
-
-Q Search
-
-Ln 496, Col 45 Spaces:
-
-
-What is prototype in js?
-
-there
-
-for every developer for choosing react or angular. but anyhow react is more popülar compared react. there are several reasons behind it.
-
-//
-
-performance: react uses virtual dom concept due to which only required UI gets re-rendered. due to which
-
-is faster. //
-
-reusable component: there is concept called reusable component due to which we write less code.
-
-active community:react has very larger and active community. if stuck at any place then there are ready made docs available and continues support.
-
-316 517 ---31. why react compare to other framework like angular- well there might be differernt reasons
-
-518
-
-519
-
-520
-
-521
-
-522
-
-523
-
-524
-
-525
-
-526
-
-// ---- --32. http status codes-
-
-527
-
-// Successful Responses (2xx)
-
-528
-
-// 200 OK: The request was successful.
-
-529
-
-530
-
-// 201 Created: The request was successful and a new resource was created. // 204 No Content: The server successfully processed the request, but there's no content to return.
-
-531
-
-532
-
-// Redirection Messages (3xx) //
-
-533
-
-301 Moved Permanently: The resource has been moved to a new URL permanently. // 302 Found: The resource is temporarily located at a different URL.
-
-534
-
-// 304 Not Modified: The resource has not been modified since the last request.
-
-535
-
-// Client Error Responses (4xx)
-
-536
-
-// 400 Bad Request: The server could not understand the request due to invalid syntax.
-
-537
-
-538
-
-539
-
-rights to the content. // 404 Not Found: The server cannot find the requested resource.
-
-// 401 Unauthorized: Authentication is required and has failed or has not yet been provided. // 403 Forbidden: The client does not have access
-
-540 // Server Error Responses (5xx)
-
-541
-
-542
-
-543
-
-received an invalid response from the upstream server. // 503 Service Unavailable: The server is not ready to handle the request, often due to maintenance or overload.
-
-// 500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.
-
+// Stateless: Each request from the clientto the server must contain all the information needed to understand and process the request. The server does not store any client context between requests. This makes each request independent.
+// Cacheable: cacheable, the client can store it and reuse it for Responses from the server can be marked as cacheable or non-cacheable. If a response subsequent requests, reducing the load on the server and improving performance.
+// Uniform Interface:REST APIs use a uniform interface, which simplifies and decouples the architecture. This uniform interface is defined by four constraints: Resource Identification: Resources are identified in requests using URIs (Uniform Resource Identifiers).
+// Layered System:The architecture can be composed of multiple layers, with each layer having a specific function. For example, a load balancer layer, a security layer, and data storage layer. This layering helps improve scalability and manageability.
+
+
+//why react compare to other framework like angular- 
+// well there might be differernt reasons for every developer for choosing react or angular. but anyhow react is more popülar compared angular. there are several reasons behind it.
+// performance: react uses virtual dom concept due to which only required UI gets re-rendered. due to whichis faster.
+// reusable component: there is concept called reusable component due to which we write less code.
+// active community:react has very larger and active community. if stuck at any place then there are ready made docs available and continues support.
