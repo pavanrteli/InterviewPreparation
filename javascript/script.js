@@ -1,77 +1,6 @@
 // javascript is a high level language which is used for coding purposes. It also supports opps concepts.
 
 
-// -------------------------------Datatypes-------------------------------------------------
-// # datatypes
-// Number - ex 1,12,14.5,102.333 etc
-// strings - "car" strings are immutable
-// boolean - true or false
-// undefined - its datatype is number
-// null - its datatype is number
-// NaN - its datatype is number
-
-
-// -----------------------------------Differnce b/w properties and functions-----------------------
-// # difference between properties and functions
-// properties - written as word(simple) eg length in str.length and also properties are mostly already defined
-//  in js
-// function - it is written with name and circle bracket eg factorial() and that are mostly defined by us
-
-
-// ------------------------------------------Arrays----------------------------------------------------
-// # arrays
-//  in arrays we can store any type of data
-//  eg - let arr = ["car",1,14,15.8];
-//  Pop() - removes last element
-//  Push() - adds element at last
-//  shift() - removes first element
-//  unshift() - adds element to the beginning of the array
-//  split() - it can return string as a array
-        // let str="there is a car";
-        // let arr=str.split(' '); 
-        // console.log(arr); // [ 'there', 'is', 'a', 'car' ]
-//  join() - it can return array as a string
-        // let arr=["there", "is", "a", "car"];
-        // let str=arr.join(" ");
-        // console.log(str); // there is a car
-
-
-// ------------------------------------------Objects-----------------------------------------------------
-// # objects - an object is an collection of properties and methods. every data here is stored in key and
-//             value format. value can be function, Number, string, boolean etc. for defining objects we can
-//             use curly brakets.
-// let obj={
-//     name:"crio.do",
-//     age:10,
-//     depart:"edtech",
-//     hq:"bengaluru",
-//     bool:true,
-//     arr:[1,2,3]
-// }
-// console.log(obj.name) // crio.do
-// console.log(obj.arr[0]) // 1
-// ------------------------------objects destructuring---------------------------------------
-// const {name,age,depart,hq}=obj
-// console.log("name:",name); // name: crio.do
-// console.log("age:",age); // age: 10
-// console.log("department:",depart); // department:edtech
-// console.log("headquater:",hq); // headquater: bengaluru
-
-
-// -------------------------------------Arrays destructuring--------------------------------------------
-// const arr=[1,2,3,4];
-// const [a,b,c,d]=arr;
-// console.log(a); // 1 
-// console.log(d); // 4
-
-
-// -----------------------------------------Math function------------------------------------------------
-// console.log(Math.floor(1.2345)) // 1
-// console.log(Math.ceil(1.2345)) // 2
-// console.log(Math.round(1.2345)) // 1
-// console.log(Math.round(1.5345)) // 2
-
-
 // -----------------------------------------Arrow functions-------------------------------------------
 // arrow functions are similar to normal functions they are anonymous function because they dont't have name.
 // only difference is that we can assign arrow function to variable and with the help of that variable we 
@@ -117,87 +46,6 @@
         //       let slicedValues = arr.slice(1,3);
         //       console.log(arr); // [ 'educative', 4, [ 1, 3 ], { type: 'animal' } ]
         //       console.log(slicedValues); // [ 4, [ 1, 3 ] ]
-
-// splice - it returns the removed elements and also modifies original Array.
-// syntax - array.splice(startIndex, deleteCount, item1, item2, ...);
-// startIndex (required): The index at which to start modifying the array. If negative, it counts from the end of the array.
-// deleteCount (optional): The number of elements to remove from the array. If set to 0, no elements are removed.
-// item1, item2, … (optional): Elements to be added to the array at the startIndex. 
-//       eg -
-//         const numbers = [1, 2, 3, 4, 5];
-//         const removedElements = numbers.splice(2, 2);
-//         console.log(removedElements); // Output: [3, 4]
-//         console.log(numbers); // Output: [1, 2, 5]
-
-// reduce - reduce method is used to calculation of whole array and then return a single value
-        // eg - 
-        // let arr=[1,2,3,4,5];
-        // let newArr=arr.reduce((acc,currVal)=>{
-        //         return acc+currVal
-        // },0)
-        // console.log(newArr); // 15
-
-
-// ------------------------primitive and non-primitive data types/passByValue&passByReference------------
-// primitive - all primitive data types are pass by value ex- Number, string etc
-        // ex - 
-        // function add(num){
-        //         num=10+num;
-        //         console.log(num); // 15
-        // }
-        // let num=5;
-        // add(num)
-        // console.log(num); //5
-// non-primitive - all non-primitive data types are pass by ReferenceError. ex - arrays, objects etc
-        // ex-
-        // let obj={
-        //         name:"lame"
-        // }
-        // console.log(obj.name); // lame
-        // let copy_obj=obj;
-        // copy_obj.name="khaby";
-        // console.log(copy_obj.name); // khaby
-        // console.log(obj.name); // khaby
-        // here 3rd o/p was also changed to khaby
-// ------------------------------spread operator------------------------------------------------
-// to solve above problem we need to use spread operator
-// spread operator - it is used to make copy of objects and arrays and assign it to variable
-        // ex-
-        // let obj={
-        //         name:"lame"
-        // }
-        // console.log(obj.name); // lame
-        // let copy_obj={...obj};
-        // copy_obj.name="khaby";
-        // console.log(copy_obj.name); // khaby
-        // console.log(obj.name); // lame 
-        // this time it gave lame for 3rd o/p because here we are not changing original obj.
-
-
-// -----------------------------Global & local scope------------------------------------------------
-// global scope - variables declared using global scope are accessible through out the code.
-// local scope - there are 2 types
-//               1. function scope - var is functional scope
-                        // function abc(){
-                        //         var a=10;
-                        //         console.log(a); // 10
-                        // }
-                        // console.log(a); // error
-                        // abc();
-//               2. block scope - let & const are block scope eg for block scope are if block, else block etc
-                        // if(true){
-                        //         let a=5;
-                        //         console.log(a); // 5
-                        // }
-                        // console.log(a); // error
-
-                        // here we are able to access "a" outside block because here we are using var so here 
-                        // a is not safe. so using var is risky for block scope
-                        // if(true){
-                        //         var a=5;
-                        //         console.log(a); // 5
-                        // }
-                        // console.log(a); // 5
 
 
 // -------------------------------diff b/w var, let & const-------------------------------------------
@@ -317,17 +165,6 @@
         // console.log(4); // 1,4,3,2
 
 
-// ------------------------------------------Async and await---------------------------------------------
-// before async and await asynchronous operations in js was achieved using callbacks and nested promises.to
-// make it more simplier and in structured pattern async and await got introduced.
-// whenever we are implementing promise or fetching data from server we need to use await keyword because as this
-// is promise we won't get data immediately hence we need to use await and if we are using await then we need
-// to make that function as async function. 
-// also if we are using async and await to implement asynchronous operation then whenever browser detects await
-// keyword it suspends the async funtion from the callstack and once promise gets resolved then again it puts 
-// async funtion into the callstack. so like this asyn and await works.
-
-
 // -----------------------------------Event propogation (Capturing and bubbling phase)-------------------------------------
 // event propogation refers to how events in dom move through the elements. whether from target phase it 
 // originates to parent or grandparent etc.
@@ -350,5 +187,171 @@
 //         eg - hello,<strong>world<strong/> then innerhtml will return hello,<strong>world<strong/> 
 
 
-What are pure functions ?
-A pure function is a function that always returns the same output for the same input and does not cause any side effects. It depends only on its input arguments and does not modify external state. Pure functions do not do any api calls also.
+// What are pure functions ?
+// A pure function is a function that always returns the same output for the same input and does not cause any side effects. It depends only on its input arguments and does not modify external state. Pure functions do not do any api calls also.
+
+
+// ------------------------------------------Async and await---------------------------------------------
+// before async and await asynchronous operations in js was achieved using callbacks and nested promises.to
+// make it more simplier and in structured pattern async and await got introduced.
+// whenever we are implementing promise or fetching data from server we need to use await keyword because as this
+// is promise we won't get data immediately hence we need to use await and if we are using await then we need
+// to make that function as async function. 
+// also if we are using async and await to implement asynchronous operation then whenever browser detects await
+// keyword it suspends the async funtion from the callstack and once promise gets resolved then again it puts 
+// async funtion into the callstack. so like this asyn and await works.
+
+
+// -------------------------------Datatypes-------------------------------------------------
+// # datatypes
+// Number - ex 1,12,14.5,102.333 etc
+// strings - "car" strings are immutable
+// boolean - true or false
+// undefined - its datatype is number
+// null - its datatype is number
+// NaN - its datatype is number
+
+
+// -----------------------------------Differnce b/w properties and functions-----------------------
+// # difference between properties and functions
+// properties - written as word(simple) eg length in str.length and also properties are mostly already defined
+//  in js
+// function - it is written with name and circle bracket eg factorial() and that are mostly defined by us
+
+
+// ------------------------------------------Arrays----------------------------------------------------
+// # arrays
+//  in arrays we can store any type of data
+//  eg - let arr = ["car",1,14,15.8];
+//  Pop() - removes last element
+//  Push() - adds element at last
+//  shift() - removes first element
+//  unshift() - adds element to the beginning of the array
+//  split() - it can return string as a array
+        // let str="there is a car";
+        // let arr=str.split(' '); 
+        // console.log(arr); // [ 'there', 'is', 'a', 'car' ]
+//  join() - it can return array as a string
+        // let arr=["there", "is", "a", "car"];
+        // let str=arr.join(" ");
+        // console.log(str); // there is a car
+
+
+// ------------------------------------------Objects-----------------------------------------------------
+// # objects - an object is an collection of properties and methods. every data here is stored in key and
+//             value format. value can be function, Number, string, boolean etc. for defining objects we can
+//             use curly brakets.
+// let obj={
+//     name:"crio.do",
+//     age:10,
+//     depart:"edtech",
+//     hq:"bengaluru",
+//     bool:true,
+//     arr:[1,2,3]
+// }
+// console.log(obj.name) // crio.do
+// console.log(obj.arr[0]) // 1
+// ------------------------------objects destructuring---------------------------------------
+// const {name,age,depart,hq}=obj
+// console.log("name:",name); // name: crio.do
+// console.log("age:",age); // age: 10
+// console.log("department:",depart); // department:edtech
+// console.log("headquater:",hq); // headquater: bengaluru
+
+
+// -------------------------------------Arrays destructuring--------------------------------------------
+// const arr=[1,2,3,4];
+// const [a,b,c,d]=arr;
+// console.log(a); // 1 
+// console.log(d); // 4
+
+
+// -----------------------------------------Math function------------------------------------------------
+// console.log(Math.floor(1.2345)) // 1
+// console.log(Math.ceil(1.2345)) // 2
+// console.log(Math.round(1.2345)) // 1
+// console.log(Math.round(1.5345)) // 2
+
+
+// splice - it returns the removed elements and also modifies original Array.
+// syntax - array.splice(startIndex, deleteCount, item1, item2, ...);
+// startIndex (required): The index at which to start modifying the array. If negative, it counts from the end of the array.
+// deleteCount (optional): The number of elements to remove from the array. If set to 0, no elements are removed.
+// item1, item2, … (optional): Elements to be added to the array at the startIndex. 
+//       eg -
+//         const numbers = [1, 2, 3, 4, 5];
+//         const removedElements = numbers.splice(2, 2);
+//         console.log(removedElements); // Output: [3, 4]
+//         console.log(numbers); // Output: [1, 2, 5]
+
+// reduce - reduce method is used to calculation of whole array and then return a single value
+        // eg - 
+        // let arr=[1,2,3,4,5];
+        // let newArr=arr.reduce((acc,currVal)=>{
+        //         return acc+currVal
+        // },0)
+        // console.log(newArr); // 15
+
+
+// ------------------------primitive and non-primitive data types/passByValue&passByReference------------
+// primitive - all primitive data types are pass by value ex- Number, string etc
+        // ex - 
+        // function add(num){
+        //         num=10+num;
+        //         console.log(num); // 15
+        // }
+        // let num=5;
+        // add(num)
+        // console.log(num); //5
+// non-primitive - all non-primitive data types are pass by ReferenceError. ex - arrays, objects etc
+        // ex-
+        // let obj={
+        //         name:"lame"
+        // }
+        // console.log(obj.name); // lame
+        // let copy_obj=obj;
+        // copy_obj.name="khaby";
+        // console.log(copy_obj.name); // khaby
+        // console.log(obj.name); // khaby
+        // here 3rd o/p was also changed to khaby
+
+
+// ------------------------------spread operator------------------------------------------------
+// to solve above problem we need to use spread operator
+// spread operator - it is used to make copy of objects and arrays and assign it to variable
+        // ex-
+        // let obj={
+        //         name:"lame"
+        // }
+        // console.log(obj.name); // lame
+        // let copy_obj={...obj};
+        // copy_obj.name="khaby";
+        // console.log(copy_obj.name); // khaby
+        // console.log(obj.name); // lame 
+        // this time it gave lame for 3rd o/p because here we are not changing original obj.
+
+
+// -----------------------------Global & local scope------------------------------------------------
+// global scope - variables declared using global scope are accessible through out the code.
+// local scope - there are 2 types
+//               1. function scope - var is functional scope
+                        // function abc(){
+                        //         var a=10;
+                        //         console.log(a); // 10
+                        // }
+                        // console.log(a); // error
+                        // abc();
+//               2. block scope - let & const are block scope eg for block scope are if block, else block etc
+                        // if(true){
+                        //         let a=5;
+                        //         console.log(a); // 5
+                        // }
+                        // console.log(a); // error
+
+                        // here we are able to access "a" outside block because here we are using var so here 
+                        // a is not safe. so using var is risky for block scope
+                        // if(true){
+                        //         var a=5;
+                        //         console.log(a); // 5
+                        // }
+                        // console.log(a); // 5
