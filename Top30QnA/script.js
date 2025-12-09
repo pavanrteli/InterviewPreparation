@@ -705,11 +705,9 @@
 // const numbers = [1, 2, 3];
 // const doubled = numbers.myMap(num => num * 2);
 // console.log(doubled); // [2, 4, 6]
-
 // Array.prototype.myMap = function(callback) {
 //   // 'this' is the array that calls myMap
 //   const result = [];
-
 //   for (let i = 0; i < this.length; i++) {
 //     // make sure index exists (for sparse arrays)
 //     if (i in this) {
@@ -717,7 +715,6 @@
 //       result.push(newValue);
 //     }
 //   }
-
 //   return result;
 // };
 
