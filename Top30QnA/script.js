@@ -20,6 +20,7 @@
         // console.log(obj1.name); // travis
         // console.log(obj1.fullName); // travis head
 
+
 // -----------------------------------------2. This keyword--------------------------------------------
 // need - 
         // to avoid conflicts between current context and the external one.
@@ -72,7 +73,6 @@
 // they come in macro task queue. now event loop checks continously on call stack whether it is empty or not
 // if it is empty it checks in task queue are there any tasks pending. if there are pending tasks then it will
 // move it to call stack one by one and this process goes on continuously. 
-
 // Note - for promises there is micro task queue and for setTimeOut there is macro task queue and event loop
 //         will always ask its first questinn to micro task queue/promises(fetching). 
 
@@ -132,6 +132,14 @@
         // <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         //   </head>
         // </html>
+
+
+// ---------------------------------diff b/w innerhtml and innertext-----------------------------------------
+// innerText - it will return a plain text excluding its tags 
+//         eg - hello,<strong>world<strong/> then innertext will return only hello,world
+
+// innerhtml - it will return a plain text including its tags 
+//         eg - hello,<strong>world<strong/> then innerhtml will return hello,<strong>world<strong/> 
 
 
 // --------------------------------7. Why use React over Vanilla JS?-----------------------------------------
@@ -516,11 +524,12 @@
 //         that how much margin, padding, border etc is given to that element.
 
 
-// ------------------Extra qns---------------------------------------------------------------------
+// ------------------useContext---------------------------------------------------------------------
 // useContext - useContext is basically a system which helps you to pass props from one level to other level without
 //              using prop drilling. it return 2 values provider and consumer. provider tells react that we want
 //              to start the context from this particular field and with the help of consumer we can make use of
 //              value in child components. 
+
 
 // what is Rest Api?
 // REST API (Representational State Transfer Application Programming Interface) is a way for different
@@ -566,7 +575,6 @@
 //   name: "Pavan",
 //   address: { city: "Bengaluru" }
 // };
-
 // const shallowCopy = { ...original };
 // shallowCopy.name = "Raj";
 // shallowCopy.address.city = "Mumbai";
@@ -580,7 +588,6 @@
 // const deepCopy = JSON.parse(JSON.stringify(original));
 // deepCopy.address.city = "Mumbai";
 // console.log(original.address.city); // "Bengaluru" — safe!
-
 
 
 // Diff between useeffect and uselayouteffect 
@@ -627,6 +634,7 @@
 // How do you optimize performance in a large React application?
 // We can optimize performance in a large React app by using techniques like code splitting, memoization (React.memo, useMemo, useCallback), lazy loading, virtualization for large lists, avoiding unnecessary re-renders, and optimizing assets and bundle size.
 
+
 // Explain react fibre and reconciliation 
 // React Fiber is the internal engine that helps React break rendering work into small units and prioritize important updates. like typing > background updates.
 // Reconciliation is the process of comparing the old and new virtual DOM trees to determine what changes in the real DOM.
@@ -635,7 +643,6 @@
 
 // Difference between local state and global state
 // Local state is data managed within a single component using useState, while global state is shared data across multiple components, usually managed with Context API or a state management library like Redux.
-
 
 
 // What are service workers and how do they relate to react apps (PWA) ?
@@ -650,13 +657,14 @@
 // Actions: Plain objects describing what happened (e.g., { type: 'ADD_TO_CART', payload: product )).
 // Reducers: Pure functions that take current state and action, and return new state.
 
+
 // redux-toolkit
 // redux-toolkit is build on top of the redux, to manage the redux states and async operations in easy and systematic format. and also in redux toolkit it provides multiple features such as there it combines actions and reducer so here we do not need to maintain separate files for state, action and reducer. Also it provides feature called configure store which helps to install redux dev tool extension for time travel debugging and also it provides thunk middleware for processing async operations called createAsyncThunk. There is useDispatch hook for dispatching actions from store and useSelector hook for reading state values
 
 
-
 // What is difference between setTimeOut and setInterval ?
 // in setTimeout function gets executed only once after mentioned time and in setInterval function gets executed repeatedly after mentioned time.
+
 
 // What is strict mode in react application ?
 // In React, StrictMode is a special wrapper component that helps you identify potential problems in your application during development.
@@ -723,6 +731,7 @@
 // async script file gets downloading parallely during html parsing and executes as downloaded due to which html parsing stops till it completes.
 // differ script file gets downloading parallely during html parsing and executes after the parsing of html document.
 // eg normal react application developed is by default differ, because react needs to first parse html, before mounting app to the root
+
 
 // what is difference between link and navlink?
 // both link and navlink are used for navigation purpose for routes. but navlink provides some enhanced features like we can check the active link and apply some styling on it and we can do it using ternary operator
