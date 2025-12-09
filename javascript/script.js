@@ -348,3 +348,7 @@
 
 // innerhtml - it will return a plain text including its tags 
 //         eg - hello,<strong>world<strong/> then innerhtml will return hello,<strong>world<strong/> 
+
+
+What are pure functions ?
+A pure function is a function that always returns the same output for the same input and does not cause any side effects. It depends only on its input arguments and does not modify external state. Pure functions do not do any api calls also.
