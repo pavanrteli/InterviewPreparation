@@ -644,6 +644,70 @@ vt//         Pass callBack function as a prop to child component.
 // Tools like Create React App automatically provide service worker setup for turning your React app into a PWA.
 
 
+What is redux ?
+Redux is a state management library for JavaScript applications, commonly used with React. It provides a centralized store where the entire application's state is kept, and it enforces a predictable way to update that state using actions and reducers.
+Store: Holds the application state.
+Actions: Plain objects describing what happened (e.g., { type: 'ADD_TO_CART', payload: product )).
+Reducers: Pure functions that take current state and action, and return new state.
+
+redux-toolkit
+redux-toolkit is build on top of the redux, to manage the redux states and async operations in easy and systematic format. and also in redux toolkit it provides multiple features such as there it combines actions and reducer so here we do not need to maintain separate files for state, action and reducer. Also it provides feature called configure store which helps to install redux dev tool extension for time travel debugging and also it provides thunk middleware for processing async operations called createAsyncThunk. There is useDispatch hook for dispatching actions from store and useSelector hook for reading state values
+
+
+
+What is difference between setTimeOut and setInterval ?
+in setTimeout function gets executed only once after mentioned time and in setInterval function gets executed repeatedly after mentioned time.
+
+What is strict mode in react application ?
+In React, StrictMode is a special wrapper component that helps you identify potential problems in your application during development.
+It highlights depreciated lifecycle methods
+detects if any unexpected side effects are there, by double invoking certain function such as useeffect hook.
+It warns if using legacy APIS
+This does not have any impact on production level
+
+
+What is fragment tag in react ?
+A fragment is a special component in react which lets you to group multiple elements without adding extra node to the dom. in react we should return a single parent element so people usually wrap it inside div which creates an extra node in dom and that may break layouts like css grid or flexbox. CSS
+
+.grid {
+display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+
+
+Without fragment -function Items() {
+return (
+<div> <div>Item 1</div>
+::
+<div>Item 2</div>
+</div>
+); }
+function App() {
+return (
+<div className="grid"> ); <Items /> <Items />
+</div>
+
+With fragment
+import React, {Fragment) from 'react';
+function Items() {
+return (
+<Fragment>
+<div>Item 1</div>
+<div>Item 2</div>
+**
+** ** **
+</Fragment>
+);
+}
+** **
+**
+function App() {
+return (
+<div className="grid">
+<Items />
+<Items />
+</div>
+);
+}
+
 
 // Implement your own version of Array.prototype.map()
 // const numbers = [1, 2, 3];
@@ -665,6 +729,14 @@ vt//         Pass callBack function as a prop to child component.
 //   return result;
 // };
 
+
+What is diff between async and differ in js?
+async script file gets downloading parallely during html parsing and executes as downloaded due to which html parsing stops till it completes.
+differ script file gets downloading parallely during html parsing and executes after the parsing of html document.
+eg normal react application developed is by default differ, because react needs to first parse html, before mounting app to the root
+
+what is difference between link and navlink?
+both link and navlink are used for navigation purpose for routes. but navlink provides some enhanced features like we can check the active link and apply some styling on it and we can do it using ternary operator
 
 
 // call a rest api using fetch or axios handle loading, errors and display data.
