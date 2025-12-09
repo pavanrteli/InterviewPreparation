@@ -65,13 +65,23 @@
 //        4. hoisting is not allowed
 
 
-// --------------------------------------------Hoisting-----------------------------------------------
-// hoisting is a javascript mechanism where variable and function declarations are moved to the top of their 
-// scope even before the code execution
-        // eg - 
-        // a=10;
-        // console.log(a); // 10
-        // var a;
+// -------------------------------------------What is Hoisting----------------------------------------------
+// need - The concept of hoisting in JavaScript was not necessarily introduced to fulfill a specific need but 
+//         rather as a result of how the language is designed and how its execution context works.
+// what is it - Hoisting is a behavior that occurs during the compilation phase of the JavaScript code,
+//         Hoisting is a javascript mechanism where variables and function declarations are moved to top of 
+//         scope before the execution of code.
+// how to use - eg -
+        // Variable hoisting
+        //    console.log(x); // undefined 
+        //      var x= 5; 
+        //    console.log(x); //5  Function hoisting:
+        // Function hoisting 
+        //     are entirely hoisted, including both the name and the function body.
+        //     This allows you to call a function before it's declared in the code.
+        // javascriptCopy code
+        // sayHello(); // "Hello, World!" 
+        // function sayHello() { console.log("Hello, World!"); }
 
 
 // ------------------------------------------Closure-----------------------------------------------------
@@ -150,10 +160,8 @@
 // they come in macro task queue. now event loop checks continously on call stack whether it is empty or not
 // if it is empty it checks in task queue are there any tasks pending. if there are pending tasks then it will
 // move it to call stack one by one and this process goes on continuously. 
-
 // Note - for promises there is micro task queue and for setTimeOut there is macro task queue and event loop
 //         will always ask its first questinn to micro task queue/promises(fetching). 
-
         // eg - 
         // console.log(1);
         // setTimeout(()=>{
@@ -163,6 +171,76 @@
         //         console.log(3);        
         // },2000)
         // console.log(4); // 1,4,3,2
+
+
+// -----------------------------------------1. What is prototype in js?------------------------------------------
+// Need - prototype play a crucial role in implementing prototyple inheritance in js. the need for prototype
+//         arises from the desire to create efficient and reusable code. prototype help in conserving memory.
+// what is it - in js everything is Object. prototype is also Object. whenever we create any Object along with
+//              that object prototype is also associated with it. in this prototype there are several 
+//              properties included. and this prototype is connected to other prototype and this is called 
+//              prototype chain. when we try to search any property in object then it will try to search in 
+//              object. after that it will search in its prototype and then it will search for in protyple 
+//              chain. and finally it reaches end where prototype object is null and it return undefined. so 
+//              prototype plays very important role in creating reusable code and conserving memory.
+// how to use - eg - 
+        // function Person(name,surname, age, role){
+        //     this.name=name;
+        //     this.surname=surname;
+        //     this.age=age;
+        //     this.role=role;
+        // }
+        // const obj1=new Person("travis","head",20,"engineer")
+        // Person.prototype.fullName=obj1.name+" "+obj1.surname;
+        // console.log(obj1.name); // travis
+        // console.log(obj1.fullName); // travis head
+
+
+// -----------------------------------------2. This keyword--------------------------------------------
+// need - 
+        // to avoid conflicts between current context and the external one.
+// what it is -
+        // this keyword refers to current context or current object we can say and if we use "this" keyword
+        // globally it will refer to window object.
+// how to use -
+        // eg - here we are passing john in greet but I want to print "Hello, I'm Alice" now if we don't use "this" 
+        // then it will print john but if I use "this" then it point to current object i.e Alice.
+        // const person = {
+        //         name: "Alice",
+        //         greet(name) {
+        //             console.log(`Hello, I'm ${this.name}.`);
+        //         },
+        //     };
+        //     person.greet("john"); // Logs "Hello, I'm Alice."
+
+
+//----------------- What is shallow copy and deep copy ? explain with example.------------------ 
+// "In JavaScript, a shallow copy duplicates only the top-level properties of an object. If the object contains nested objects or arrays, the references to those nested structures are preserved. A deep copy, on the other hand, recursively copies all levels of the object, ensuring complete separation from the original.
+// shallow copy
+// const original = {
+//   name: "Pavan",
+//   address: { city: "Bengaluru" }
+// };
+// const shallowCopy = { ...original };
+// shallowCopy.name = "Raj";
+// shallowCopy.address.city = "Mumbai";
+// console.log(original.address.city); // "Mumbai" — affected!
+
+// deep copy
+// const original = {
+//   name: "Pavan",
+//   address: { city: "Bengaluru" }
+// };
+// const deepCopy = JSON.parse(JSON.stringify(original));
+// deepCopy.address.city = "Mumbai";
+// console.log(original.address.city); // "Bengaluru" — safe!
+
+
+// What are pure functions ?
+// A pure function is a function that always returns the same output for the same input and does not cause any side effects. It depends only on its input arguments and does not modify external state. Pure functions do not do any api calls also.
+
+
+// **************************************************************************************************************************************************************
 
 
 // -----------------------------------Event propogation (Capturing and bubbling phase)-------------------------------------
@@ -177,18 +255,6 @@
 // according to our requirement we can make use of capturing or bubblibg phase.
 // Note - for capturing phase we need to set useCapture parameter to true and for bubbling phase it needs
 //        to set false and bydefault it is false only.
-
-
-// ---------------------------------diff b/w innerhtml and innertext-----------------------------------------
-// innerText - it will return a plain text excluding its tags 
-//         eg - hello,<strong>world<strong/> then innertext will return only hello,world
-
-// innerhtml - it will return a plain text including its tags 
-//         eg - hello,<strong>world<strong/> then innerhtml will return hello,<strong>world<strong/> 
-
-
-// What are pure functions ?
-// A pure function is a function that always returns the same output for the same input and does not cause any side effects. It depends only on its input arguments and does not modify external state. Pure functions do not do any api calls also.
 
 
 // ------------------------------------------Async and await---------------------------------------------
