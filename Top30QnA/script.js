@@ -41,6 +41,9 @@
         //     };
         //     person.greet("john"); // Logs "Hello, I'm Alice."
 
+        //a="car"
+        //console.log(this.a) //car
+
 
 // -------------------------------------------3. What is Hoisting----------------------------------------------
 // need - The concept of hoisting in JavaScript was not necessarily introduced to fulfill a specific need but 
