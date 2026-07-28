@@ -20,6 +20,9 @@
         // console.log(obj1.name); // travis
         // console.log(obj1.fullName); // travis head
 
+        //a="abcd"
+        //Object.getProtoTypeOf(a)
+
 
 // -----------------------------------------2. This keyword--------------------------------------------
 // need - 
