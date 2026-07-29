@@ -63,6 +63,9 @@
         // sayHello(); // "Hello, World!" 
         // function sayHello() { console.log("Hello, World!"); }
 
+        // var, let, const all are hoisted but var is hoisted and initialized with undefined and let,const are hoisted
+        // but not initialized so it will give reference error.
+
 
 // ------------------------4. What are event loops?------------------------------------------------------
 // Need for it - before the introduction of event loops asynchronous operations were handled by using callback
