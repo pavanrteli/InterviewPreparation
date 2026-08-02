@@ -288,7 +288,7 @@
 // "In React, a controlled component is one where the form data is handled by React state. An uncontrolled component,
 //  on the other hand, relies on the DOM to manage its own state using refs. I typically use controlled components 
 // when I need to validate, manipulate, or track user input in real time. Uncontrolled components are useful for 
-// quick forms or when integrating with non-React libraries."
+// quick forms or when integrating with non-React libraries." Also there is no unnecessary re-rendering on changing input.
 
 // SN	Controlled	                                        Uncontrolled
 // 1.	It does not maintain its internal state.	        It maintains its internal states.
@@ -296,6 +296,9 @@
 // 3.	It accepts its current value as a prop.	                It uses a ref for their current values.
 // 4.	It allows validation control.	                        It does not allow validation control.
 // 5.	It has better control over the form elements and data.	It has limited control over the form elements and data.
+
+// https://codesandbox.io/p/sandbox/f53q2x?file=%2Fsrc%2FApp.js%3A31%2C53
+
 
 
 // -----------------------------------------16. What are lifecycle methods?-------------------------------------
