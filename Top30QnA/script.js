@@ -403,7 +403,8 @@
 // 2 things to keep in mind while doing it 
 //         Define callBack function in parent itself but calling it, you can do it from child component.
 //         Pass callBack function as a prop to child component.
-// https://codesandbox.io/p/sandbox/482rch
+// https://codesandbox.io/p/sandbox/482rch - Usecallback
+// https://codesandbox.io/p/sandbox/482rch?file=%2Fsrc%2FComponents%2FStateLifting%2Fparent1.jsx%3A11%2C17 - StateLifting
 
 
 // --------------------------------22. Difference between useCallback & useMemo---------------------------------
