@@ -424,6 +424,7 @@
 //         Use useMemo when you want to optimize and cache the result of a computation that depends on certain inputs.
 //         Use useCallback when you want to optimize the creation of callback functions that are passed to child components.
 // useCallBack - https://codesandbox.io/p/sandbox/6wdn6l?file=%2Fsrc%2FApp.js%3A9%2C2
+// useMemo - https://codesandbox.io/p/sandbox/ds55td?file=%2Fsrc%2FComponents%2FUseMemo%2Fusememo.jsx%3A19%2C16
 
 
 // ------------------------------------------23. What is useRef---------------------------------------------
