@@ -584,7 +584,7 @@
 // - Dynamic elements: It works even if child elements are added or removed later.
 // - Cleaner code: Centralized logic is easier to maintain.
 // I often use event delegation when building components like dropdowns, lists, or tables where rows or items are dynamically generated. It’s a great way to write scalable and maintainable front-end code.
-
+// https://codesandbox.io/p/sandbox/jlpw6x?file=%2Fsrc%2Findex.html%3A10%2C24
 
 //----------------- What is shallow copy and deep copy ? explain with example.------------------ 
 // "In JavaScript, a shallow copy duplicates only the top-level properties of an object. If the object contains nested objects or arrays, the references to those nested structures are preserved. A deep copy, on the other hand, recursively copies all levels of the object, ensuring complete separation from the original.
